@@ -1,28 +1,90 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import CoverMan from "./../../public/img/coolMan.png?jsx";
+
+const events = [
+  {
+    title: 'Titolo',
+    link: '#',
+    coverEmoji: '🥦',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum. Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim.',
+    tags: [
+      {
+        label: 'Aperitivo',
+        bg: 'bg-fuchsia-400'
+      },
+      {
+        label: 'Milano',
+        bg: 'bg-lime-400'
+      }
+    ]
+  },
+  {
+    title: 'Evento2',
+    link: '#',
+    coverEmoji: '🍒',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum. Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim.',
+    tags: [
+      {
+        label: 'Aperitivo',
+        bg: 'bg-fuchsia-400'
+      },
+      {
+        label: 'Milano',
+        bg: 'bg-lime-400'
+      }
+    ]
+  }
+]
 
 export default component$(() => {
   return (
-    <section class="relative flex flex-col justify-center h-[32rem]">
-      <h3 class="text-center z-50">sentitamente vostro</h3>
-      <h1 class="text-center text-5xl font-bold z-50">We are<br />Team GOG</h1>
-      <article class="absolute left-0 right-0 top-0 bottom-0 bg-fuchsia-100 z-10">
-        <div class="
-          absolute
-          left-0
-          right-0
-          top-0
-          bottom-0
-          bg-gradient-to-r
-          from-blue-500
-          transition-all
-        "></div>
-        <div class="absolute inset-x-2/3 inset-y-1/3 w-24 h-24 rounded-full bg-fuchsia-400"></div>
-        <div class="w-24 h-24 rounded-full bg-fuchsia-400"></div>
-        <div class="w-24 h-24 rounded-full bg-fuchsia-400"></div>
-        <div class="w-24 h-24 rounded-full bg-fuchsia-400"></div>
-      </article>
-    </section>
+    <>
+      <section class="relative items-center max-w-5xl mx-auto mt-10 md:flex md:justify-between md:gap-x-10">
+        <div class="px-4">
+          <h1 class="text-3xl font-bold mb-4">We are Team GOG 👋</h1>
+          <p class="text-xl leading-9 max-w-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        </div>
+        <div>
+          <CoverMan class="invert h-auto block" />
+        </div>
+      </section>
+
+      <section class="max-w-5xl mx-auto mt-10 px-4">
+        <h2 class="text-3xl font-bold mb-4">Eventi Recenti</h2>
+        <div class="flex flex-col gap-6">
+          {events.map(( ev, index ) => {
+            return (
+            <article key={'event' + index} class="flex flex-col items-center gap-x-8 rounded-md bg-slate-800 p-3 md:flex-row">
+              <div class="shrink-0">
+                <a href={ev.link} class="text-5xl">
+                  {ev.coverEmoji}
+                </a>
+              </div>
+              <div>
+                <div class="flex flex-col items-center gap-y-2 md:flex-row">
+                  <a class="hover:text-cyan-400" href="/demo/astro-boilerplate">
+                    <div class="text-xl font-semibold">{ev.title}</div>
+                  </a>
+
+                  <div class="ml-3 flex gap-2">
+                    {ev.tags?.map((tag, i) => {
+                      return (
+                        <div key={'tag' + i} class={['rounded-md', 'px-2', 'py-1', 'text-xs', 'font-semibold', tag.bg]}>{tag.label}</div>
+                      )
+                    })}
+                  </div>
+                </div>
+                <p class="mt-3 text-gray-400">
+                  {ev.description}
+                </p>
+              </div>
+            </article>
+            )
+          })}
+        </div>
+      </section>
+    </>
   );
 });
 
