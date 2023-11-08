@@ -1,43 +1,12 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import _eventsJson from './../data/events.json';
+import type { Event } from "~/shared/interfaces/event";
 import CoverMan from "./../../public/img/coolMan.png?jsx";
 
-const events = [
-  {
-    title: 'Titolo',
-    link: '#',
-    coverEmoji: '🥦',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum. Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim.',
-    tags: [
-      {
-        label: 'Aperitivo',
-        bg: 'bg-fuchsia-400'
-      },
-      {
-        label: 'Milano',
-        bg: 'bg-lime-400'
-      }
-    ]
-  },
-  {
-    title: 'Evento2',
-    link: '#',
-    coverEmoji: '🍒',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum. Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim.',
-    tags: [
-      {
-        label: 'Aperitivo',
-        bg: 'bg-fuchsia-400'
-      },
-      {
-        label: 'Milano',
-        bg: 'bg-lime-400'
-      }
-    ]
-  }
-]
-
 export default component$(() => {
+  const eventsJson = _eventsJson as Event[];
+  const events: Event[] = eventsJson;
   return (
     <>
       <section class="relative items-center max-w-5xl mx-auto mt-10 md:flex md:justify-between md:gap-x-10">
@@ -57,7 +26,7 @@ export default component$(() => {
             return (
             <article key={'event' + index} class="flex flex-col items-center gap-x-8 rounded-md bg-slate-800 p-3 md:flex-row">
               <div class="shrink-0">
-                <a href={ev.link} class="text-5xl">
+                <a href={ev.url} class="text-5xl md:ml-4">
                   {ev.coverEmoji}
                 </a>
               </div>
