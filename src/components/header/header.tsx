@@ -10,11 +10,6 @@ export const Header = component$(() => {
         <nav class="max-w-5xl h-20 p-4 flex items-center mx-auto">
             <p>logo</p>
             <ul class="grow flex gap-4 justify-center">
-                {/* {menu.map((item, index) => {
-                    return <li key={index + item.label}>
-                              <UnderlinedLink href={item.url}>{item.label}</UnderlinedLink>
-                        </li>
-                })} */}
             </ul>
             <ul class="flex gap-4 justify-center">
                 {menu.map((item, index) => {
