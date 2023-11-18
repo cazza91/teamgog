@@ -1,6 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import { MAIN_MENU } from "~/shared/enums/mainMenu";
 import { UnderlinedLink } from "../underlined-link/underlined-link";
+import { Link } from "@builder.io/qwik-city";
 
 export const Header = component$(() => {
 
@@ -8,7 +9,7 @@ export const Header = component$(() => {
 
     return <header class="w-100">
         <nav class="max-w-5xl h-20 p-4 flex items-center mx-auto">
-            <p>logo</p>
+            <Link href="/">logo</Link>
             <ul class="grow flex gap-4 justify-center">
             </ul>
             <ul class="flex gap-4 justify-center">

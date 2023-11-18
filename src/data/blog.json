@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1",
+        "title": "LaGaraDi Ragù - Le foto 📷",
+        "date": "2023-11-15",
+        "url": "/article/1",
+        "coverEmoji": "📷",
+        "content": "Post con le foto della gara di ragù",
+        "location": "Ufficio Milano, Via Desenzano 2",
+        "image": "https://media.istockphoto.com/id/1222233279/it/foto/formazione-donda-del-mare-adriatico.jpg?s=612x612&w=0&k=20&c=FKEJIDWz82vhHCBV7G4fswGYVOpe9yBJuPCrSqTbdRI=",
+        "tags": [
+            {
+                "label": "Aperitivo",
+                "bg": "bg-fuchsia-900"
+            },
+            {
+                "label": "Milano",
+                "bg": "bg-lime-500"
+            }
+        ]
+        
+    }
+]

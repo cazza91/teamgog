@@ -5,5 +5,8 @@ export const HOMEPAGE_CONTENT = {
     },
     EVENTS_SECTION: {
         TITLE: 'Eventi Recenti'
+    },
+    BLOG_SECTION: {
+        TITLE: 'Articoli'
     }
 }
