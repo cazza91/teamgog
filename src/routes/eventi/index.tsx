@@ -1,11 +1,11 @@
 import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
-import type { Event } from "~/shared/interfaces/event";
+import type { IEvent } from "~/shared/interfaces/event";
 import _eventsJson from '../../data/events.json';
 
 export default component$(() => {
-  const eventsJson = _eventsJson as Event[];
-  const events: Event[] = eventsJson;
+  const eventsJson = _eventsJson as IEvent[];
+  const events: IEvent[] = eventsJson;
 
   return (
     <section class="max-w-5xl mx-auto mt-10 px-4 flex gap-4">
