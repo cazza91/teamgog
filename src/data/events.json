@@ -3,11 +3,12 @@
         "id": "1",
         "title": "LaGaraDi - Ragù",
         "date": "2023-09-14",
+        "pubblicationDate": "2023-08-10",
         "url": "/eventi/1",
-        "coverEmoji": "🥦",
+        "coverEmoji": "🍝",
         "description": "Minim sit et sunt magna dolore deserunt anim cillum nisi culpa. Aliquip eiusmod ad exercitation occaecat voluptate labore. Occaecat Lorem et ad do id cillum. Ullamco eu nulla duis culpa labore velit irure duis nisi tempor sint laborum. Fugiat commodo et adipisicing ex ea occaecat aliquip deserunt ex labore excepteur fugiat. Elit laborum aliqua ut mollit.",
         "location": "Ufficio Milano, Via Desenzano 2",
-        "image": "https://media.istockphoto.com/id/1222233279/it/foto/formazione-donda-del-mare-adriatico.jpg?s=612x612&w=0&k=20&c=FKEJIDWz82vhHCBV7G4fswGYVOpe9yBJuPCrSqTbdRI=",
+        "image": "https://www.pastafattaincasa.com/wp-content/uploads/2020/06/tagliatelle-ragu.png",
         "tags": [
             {
                 "label": "Aperitivo",
@@ -24,6 +25,7 @@
         "id": "2",
         "title": "LaGaraDi - Limoncello",
         "date": "2023-11-03",
+        "pubblicationDate": "2023-08-10",
         "url": "/eventi/2",
         "coverEmoji": "🍒",
         "description": "Minim sit et sunt magna dolore deserunt anim cillum nisi culpa. Aliquip eiusmod ad exercitation occaecat voluptate labore. Occaecat Lorem et ad do id cillum. Ullamco eu nulla duis culpa labore velit irure duis nisi tempor sint laborum. Fugiat commodo et adipisicing ex ea occaecat aliquip deserunt ex labore excepteur fugiat. Elit laborum aliqua ut mollit.",

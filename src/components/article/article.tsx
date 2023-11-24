@@ -1,9 +1,10 @@
 import { component$ } from "@builder.io/qwik";
+import { Link } from "@builder.io/qwik-city";
 import type { IBlog } from "~/shared/interfaces/blog";
 import type { IEvent } from "~/shared/interfaces/event";
 
 export const Article = component$((article: IEvent | IBlog) => {
-  return <a
+  return <Link
   href={article.url}
   class="
   flex flex-col items-center gap-x-8 rounded-md py-5 px-3 md:flex-row
@@ -34,5 +35,5 @@ export const Article = component$((article: IEvent | IBlog) => {
       </p>
     )}
   </div>
-</a>;
+</Link>;
 })

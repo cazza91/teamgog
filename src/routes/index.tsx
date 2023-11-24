@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 
-import CoverMan from "./../../public/img/coolMan.png?jsx";
+import CoverMan from "./../../public/img/coolMan.png?url&jsx";
 import { HOMEPAGE_CONTENT } from "~/shared/enums/homepageContent";
 
 import type { IBlog } from "~/shared/interfaces/blog";
@@ -11,10 +11,11 @@ import _blogJson from '../data/blog.json';
 import { Article } from "~/components/article/article";
 
 export default component$(() => {
-  const eventsJson = _eventsJson as IEvent[];
-  const events: IEvent[] = eventsJson;
-  const blogJson = _blogJson as IBlog[];
-  const blogs: IBlog[] = blogJson;
+
+  const events = _eventsJson as IEvent[];
+
+  const blogs = _blogJson as IBlog[];
+
   return (
     <>
       <section class="relative items-center max-w-5xl mx-auto mt-10 md:flex md:justify-between md:gap-x-10">
