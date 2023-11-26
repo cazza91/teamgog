@@ -1,14 +1,14 @@
 import { component$ } from "@builder.io/qwik";
 import { useLocation } from "@builder.io/qwik-city";
 
-import _eventsJson from './../../../data/events.json';
+import _eventsJson from '../../../data/events.json';
 import type { IEvent } from "~/shared/interfaces/event";
 
 
 export default component$(() => {
     const loc = useLocation();
 
-    const single: IEvent | undefined = (_eventsJson as IEvent[]).find(ev => ev.id === loc.params.id);
+    const single: IEvent | undefined = (_eventsJson as IEvent[]).find(ev => ev.url === `/eventi/${loc.params.url}`);
 
     if (!single) return <></>;
 
