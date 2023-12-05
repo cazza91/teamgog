@@ -1,5 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
+import { FOOTER_CONTENT } from "~/shared/enums/footerContent";
 import { MAIN_MENU } from "~/shared/enums/mainMenu";
 
 export const Footer = component$(() => {
@@ -18,7 +19,7 @@ export const Footer = component$(() => {
                     </ul>
                 </div>
                 <hr class="my-3 sm:mx-auto border-gray-700 lg:my-8" />
-                <span class="block text-sm sm:text-center text-gray-400">© 2022 Sentitamente Vostro</span>
+                <span class="block text-sm sm:text-center text-gray-400">{FOOTER_CONTENT.COPYRIGHT_TEXT}</span>
             </div>
         </footer>
     )
