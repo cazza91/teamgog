@@ -63,3 +63,11 @@ The production build will generate client and server modules by running both cli
 ```shell
 yarn build # or `yarn build`
 ```
+
+## Google Cloud Run Server
+
+This app has a minimal [Cloud Run server](https://cloud.google.com/run) implementation. After running a full build, deploy your app with:
+
+```
+npm run deploy
+```
