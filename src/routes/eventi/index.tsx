@@ -10,7 +10,7 @@ export default component$(() => {
   return (
     <section class="max-w-5xl mx-auto mt-10 px-4 flex gap-4">
       {events.map((ev, index) => {
-        return <Link class="w-1/3" key={ev.id + index} href={ev.id}>
+        return <Link class="w-1/3" key={ev.id + index} href={ev.url}>
           <div class="rounded overflow-hidden shadow-lg bg-white">
             <img width="16" height="9" class="w-full" src={ev.image} alt={ev.title} />
             <div class="px-6 py-4">
